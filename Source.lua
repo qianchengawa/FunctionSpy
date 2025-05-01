@@ -1,12 +1,12 @@
 local G2L = {};
 
 -- StarterGui.BIXUI
-G2L["1"] = Instance.new("ScreenGui", gethui());
+G2L["1"] = Instance.new("ScreenGui");
 G2L["1"]["IgnoreGuiInset"] = true;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["1"]["Name"] = [[BIXUI]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-
+G2L["1"]["Parent"] = (gethui and gethui()) or (syn and syn.protect_gui and syn.protect_gui(G2L["1"])) or CoreGui
 
 -- StarterGui.BIXUI.Frame
 G2L["2"] = Instance.new("Frame", G2L["1"]);
